@@ -8,7 +8,7 @@ using Core.DataAccess.EntityFramwork;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EFCategoryDal : EfEntitiyRepositoryBase<Category, NorthwindContext>, ICategoryDal
+    public class EFCategoryDal : EfEntityRepositoryBase<Category, NorthwindContext>, ICategoryDal
 
     {
 

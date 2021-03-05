@@ -9,7 +9,7 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             //Data Transformation Object
-            ProductTest();
+           // ProductTest();
             //IoC 
             //CategoryTest();
         }
@@ -17,7 +17,7 @@ namespace ConsoleUI
         private static void CategoryTest()
         {
             CategoryManager categoryManager = new CategoryManager(new EFCategoryDal());
-            foreach (var category in categoryManager.GetAll())
+            foreach (var category in categoryManager.GetAll().Data)
             {
                 Console.WriteLine(category.CategoryName);
             }
@@ -25,7 +25,7 @@ namespace ConsoleUI
 
         private static void ProductTest()
         {
-            ProductManeger productManager = new ProductManeger(new EFProductDal());
+            ProductManeger productManager = new ProductManeger(new EFProductDal(),new CategoryManager(new EFCategoryDal()));
 
             var result = productManager.GetProductDetails();
 

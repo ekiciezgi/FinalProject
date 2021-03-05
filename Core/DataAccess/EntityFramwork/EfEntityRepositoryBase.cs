@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace Core.DataAccess.EntityFramwork
 {
-   public  class EfEntitiyRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
+   public  class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
         where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
     {
